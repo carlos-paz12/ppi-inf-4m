@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação dinâmica</title>
+</head>
+
+<body>
+    <button onclick="alert('Hello World')">Say Hello World</button>
+    <button onclick="espanhol()">Decir Hola Mundo</button>
+    <button id="frances">Dire Bonjour le Monde</button>
+    <button id="portugues">Diga Olá Mundo</button>
+    <button id="alemao">Sag Hallo Welt</button>
+    <script src="js/script.js"></script>
+    <script>
+        function espanhol() {
+            alert("¡Hola Mundo!");
+        }
+
+        function frances() {
+            alert("Bonjour le Monde");
+        }
+
+        document.getElementById("frances").addEventListener("click", frances); 
+    </script>
+</body>
+
+</html>
