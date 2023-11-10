@@ -20,21 +20,29 @@
     $marca = "Volkswagen";
     $autonomia = 6.2;
     
-    /* Prepara um comando SQL */
-    $comando = $conexao->prepare("INSERT INTO carros (placa, modelo, marca, autonomia) VALUES (:placa, :modelo, :marca, :autonomia);");
+    /* Comando SQL INSERT */
+    $comandoInsert = $conexao->prepare("INSERT INTO carros (placa, modelo, marca, autonomia) VALUES (:placa, :modelo, :marca, :autonomia);");
 
     /*
      * Substitue os marcadores de posição pelos devidos valores
      *
      * Evita que o software sofra de uma SQL Injection
      */
-    $comando->bindParam(":placa", $placa);
-    $comando->bindParam(":modelo", $modelo);
-    $comando->bindParam(":marca", $marca);
-    $comando->bindParam(":autonomia", $autonomia);
+    $comandoInsert->bindParam(":placa", $placa);
+    $comandoInsert->bindParam(":modelo", $modelo);
+    $comandoInsert->bindParam(":marca", $marca);
+    $comandoInsert->bindParam(":autonomia", $autonomia);
 
     /* Executa o comando que foi preparado */
-    $comando->execute();
+    $comandoInsert->execute();
+
+
+    /* Comando SQL DELETE */
+    $comandoDelete = $conexao->prepare("DELETE FROM carros WHERE placa=:placa");
+    
+    $comandoDelete->bindParam(":placa", $placa);
+
+    $comandoDelete->execute();
 
     /* Consulta ao banco */
     $consulta = $conexao->query("SELECT * FROM carros;");
