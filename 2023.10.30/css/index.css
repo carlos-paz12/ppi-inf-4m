@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #091018;
+}
+
+header {
+    background-color: #19355a;
+    color: #f8f8f8;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+
+    padding: 1vh;
+    width: 100vw;
+}
+
+header > ul {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+header > ul > li > a {
+    color: #3f6699;
+    text-decoration: none;
+    transition: .3s;
+}
+
+header > ul > li > a:hover {
+    color: #d1d1d1;
+    transition: .3s;
+}
+
+table {
+    border-collapse: collapse;
+    color: #f8f8f8;
+    text-align: left;
+
+    margin: 5vh auto;
+    width: 80vw;
+}
+
+table > thead > tr {
+    background-color: #3f6699;
+}
+
+table > thead > tr > th,
+table > tbody > tr > td{
+    padding: 15px 6px;
+}
+
+table > tbody > tr {
+    background-color: #1d212b;
+}
+
+.btn {
+    border-radius: 5px;
+    color: #d1d1d1;
+    padding: .2em;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s;
+    width: 4vw;
+}
+
+#btn-editar {
+    background-color: #1f9de6;
+}
+
+#btn-editar:hover {
+    background-color: #5cbeff;
+}
+
+#btn-deletar {
+    background-color: #e61f1f;
+    transition: .2s;
+}
+
+#btn-deletar:hover {
+    background-color: #ff5c5c;
+    transition: .2s;
+}
