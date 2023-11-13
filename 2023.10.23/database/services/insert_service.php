@@ -18,4 +18,4 @@ $comandoInsert->bindParam(":autonomia", $autonomia);
 
 $comandoInsert->execute();
 
-header("Location:../../carros_insert.php");
+header("Location:../../carros_insert.html");

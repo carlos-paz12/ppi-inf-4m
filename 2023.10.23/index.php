@@ -24,7 +24,7 @@ $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                 <a href="#">Home</a>
             </li>
             <li>
-                <a href="carros_insert.php">Inserir novo carro</a>
+                <a href="carros_insert.html">Inserir novo carro</a>
             </li>
         </ul>
     </header>
